@@ -1,0 +1,171 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.a2fit.FifthFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Profile"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-light"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/toolbar_title" />
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginTop="78dp"
+        android:text="Your name:"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:textSize="18dp"/>
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginTop="108dp"
+        android:ems="10"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:hint="Enter name"/>
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginTop="158dp"
+        android:text="Your age:"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:textSize="18dp"/>
+
+    <EditText
+        android:id="@+id/age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginTop="186dp"
+        android:ems="10"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:hint="Enter age"/>
+
+    <TextView
+        android:id="@+id/text4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginTop="238dp"
+        android:text="Your weight:"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:textSize="18dp"/>
+
+    <EditText
+        android:id="@+id/weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginTop="266dp"
+        android:ems="10"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:hint="Enter weight"/>
+
+    <TextView
+        android:id="@+id/text5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginTop="318dp"
+        android:text="Your height:"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:textSize="18dp"/>
+
+    <EditText
+        android:id="@+id/height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginTop="346dp"
+        android:ems="10"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:hint="Enter height"/>
+
+    <TextView
+        android:id="@+id/text7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginTop="396dp"
+        android:text=""
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:textSize="18dp"/>
+
+    <TextView
+        android:id="@+id/text6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginTop="398dp"
+        android:text="Gender:"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:textSize="18dp"/>
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="428dp"
+        android:orientation="vertical">
+        <RadioButton android:id="@+id/radio_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="Male"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/radio_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="Female"
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:paddingLeft="4.0dip"
+        android:paddingTop="5.0dip"
+        android:paddingRight="4.0dip"
+        android:paddingBottom="1.0dip"
+        android:gravity="center_horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:fontFamily="sans-serif-light"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="Cancel"/>
+
+        <Button
+            android:id="@+id/okButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="Submit"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

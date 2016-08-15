@@ -1,0 +1,247 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.a2fit.MainFragment">
+
+    <!--<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--xmlns:tools="http://schemas.android.com/tools"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_marginTop="56dp"-->
+        <!--android:padding="5dp"-->
+        <!--android:stretchColumns="1,2,3"-->
+        <!--tools:context=".MainFragment">-->
+
+    <!--<TableRow-->
+        <!--android:id="@+id/tableRow1"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/textViewX"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_width="1dp"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_column="1"-->
+            <!--android:text="X"/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/textViewY"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_width="1dp"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_column="2"-->
+            <!--android:text="Y"/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/textViewZ"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_width="1dp"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_column="3"-->
+            <!--android:text="Z"/>-->
+
+    <!--</TableRow>-->
+
+        <!--<TableRow-->
+            <!--android:id="@+id/tableRow4"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content">-->
+
+            <!--<SeekBar-->
+                <!--android:id="@+id/seekBar"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="120dp"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:max="20"-->
+                <!--android:layout_span="4"/>-->
+
+        <!--</TableRow>-->
+
+        <!--<TableRow-->
+            <!--android:id="@+id/tableRow5"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/textSensetive"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_span="4"-->
+                <!--android:layout_marginLeft="220dp"-->
+                <!--android:text="-&#45;&#45;"-->
+                <!--android:textSize="20sp"/>-->
+
+        <!--</TableRow>-->
+
+    <!--</TableLayout>-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-light"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/toolbar_title" />
+
+    <TextView
+        android:id="@+id/hi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginTop="78dp"
+        android:text="Hi: "
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:textSize="22dp"/>
+
+    <TextView
+        android:id="@+id/name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginTop="116dp"
+        android:text="Name"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:textSize="30dp"/>
+
+    <!--<TextView-->
+        <!--android:id="@+id/age_text"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:fontFamily="sans-serif-light"-->
+        <!--android:layout_marginTop="108dp"-->
+        <!--android:text="Age"-->
+        <!--android:layout_marginLeft="@dimen/activity_horizontal_margin"-->
+        <!--android:textSize="18dp"/>-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/weight_text"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:fontFamily="sans-serif-light"-->
+        <!--android:layout_marginTop="138dp"-->
+        <!--android:text="Weight"-->
+        <!--android:layout_marginLeft="@dimen/activity_horizontal_margin"-->
+        <!--android:textSize="18dp"/>-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/height_text"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:fontFamily="sans-serif-light"-->
+        <!--android:layout_marginTop="168dp"-->
+        <!--android:text="Height"-->
+        <!--android:layout_marginLeft="@dimen/activity_horizontal_margin"-->
+        <!--android:textSize="18dp"/>-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/gender_text"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:fontFamily="sans-serif-light"-->
+        <!--android:layout_marginTop="198dp"-->
+        <!--android:text="Gender"-->
+        <!--android:layout_marginLeft="@dimen/activity_horizontal_margin"-->
+        <!--android:textSize="18dp"/>-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calories:"
+        android:textSize="34dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="220dp"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:fontFamily="sans-serif-light"/>
+
+    <TextView
+        android:id="@+id/textCalories"
+        android:textSize="46dp"
+        android:layout_marginLeft="265dp"
+        android:text="---"
+        android:layout_span="4"
+        android:layout_marginTop="248dp"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/blue_circle"
+        android:layout_marginTop="128dp"
+        android:layout_width="160dp"
+        android:layout_height="300dp"
+        android:layout_marginLeft="220dp"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        android:src="@drawable/blue_circle"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Steps:"
+        android:textSize="34dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginLeft="60dp"
+        android:fontFamily="sans-serif-light"/>
+
+    <TextView
+            android:id="@+id/textSteps"
+            android:textSize="46dp"
+            android:layout_marginLeft="90dp"
+            android:text="---"
+            android:layout_span="4"
+            android:layout_marginTop="348dp"
+            android:textColor="@color/colorAccent"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/circle"
+            android:layout_marginTop="228dp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_width="200dp"
+            android:layout_height="300dp"
+            android:gravity="center"
+            android:src="@drawable/green_circle"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:paddingLeft="4.0dip"
+        android:paddingTop="5.0dip"
+        android:paddingRight="4.0dip"
+        android:paddingBottom="1.0dip"
+        android:gravity="center_horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/buttonRessetS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:fontFamily="sans-serif-light"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="Reset Steps"/>
+
+        <Button
+            android:id="@+id/buttonRessetC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="Reset Calories"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

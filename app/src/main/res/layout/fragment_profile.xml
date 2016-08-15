@@ -1,0 +1,137 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.a2fit.ProfileFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profile"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-light"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/toolbar_title" />
+
+    <ImageView
+        android:id="@+id/profile_src"
+        android:layout_width="130dp"
+        android:layout_height="120dp"
+        android:src="@drawable/user"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="76dp"/>
+
+    <TextView
+        android:id="@+id/hi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginTop="198dp"
+        android:text="Hi,"
+        android:layout_marginLeft="46dp"
+        android:textSize="26dp"/>
+
+    <TextView
+        android:id="@+id/name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginTop="198dp"
+        android:text="Name"
+        android:layout_marginLeft="108dp"
+        android:textSize="30dp"/>
+
+    <TextView
+        android:id="@+id/profile_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginTop="248dp"
+        android:text="Age:"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:textSize="26dp"/>
+
+    <TextView
+    android:id="@+id/age_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fontFamily="sans-serif-light"
+    android:layout_marginTop="248dp"
+    android:text="Age"
+    android:layout_marginLeft="128dp"
+    android:textSize="30dp"/>
+
+    <TextView
+        android:id="@+id/profile_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginTop="298dp"
+        android:text="Weight:"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:textSize="26dp"/>
+
+    <TextView
+    android:id="@+id/weight_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fontFamily="sans-serif-light"
+    android:layout_marginTop="298dp"
+    android:text="Weight"
+    android:layout_marginLeft="128dp"
+    android:textSize="30dp"/>
+
+    <TextView
+        android:id="@+id/profile_height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginTop="348dp"
+        android:text="Height:"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:textSize="26dp"/>
+
+    <TextView
+    android:id="@+id/height_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fontFamily="sans-serif-light"
+    android:layout_marginTop="348dp"
+    android:text="Height"
+    android:layout_marginLeft="128dp"
+    android:textSize="30dp"/>
+
+    <TextView
+        android:id="@+id/profile_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginTop="398dp"
+        android:text="Gender:"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:textSize="26dp"/>
+
+    <TextView
+    android:id="@+id/gender_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fontFamily="sans-serif-light"
+    android:layout_marginTop="398dp"
+    android:text="Gender"
+    android:layout_marginLeft="128dp"
+    android:textSize="30dp"/>
+
+    <Button
+        android:id="@+id/buttonEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:text="Edit Profile"/>
+
+</RelativeLayout>
