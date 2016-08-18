@@ -47,7 +47,7 @@ public class HomeFragment extends Fragment {
     private static int numCal;
 
     private SeekBar seekBar;
-    private  int threshold; //Point at which we want to trigger a 'step'
+    private  int threshold; // Point at which we want to trigger a 'step'
 
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
