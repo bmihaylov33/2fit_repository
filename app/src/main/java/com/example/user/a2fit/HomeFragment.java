@@ -2,7 +2,6 @@ package com.example.user.a2fit;
 
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -10,8 +9,6 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,7 +17,7 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-public class MainFragment extends Fragment {
+public class HomeFragment extends Fragment {
 
     User user = new User();
     private TextView textViewX;
@@ -46,8 +43,8 @@ public class MainFragment extends Fragment {
 
     private float previousY;
     private float currentY;
-    private int numSteps;
-    private int numCal;
+    private static int numSteps;
+    private static int numCal;
 
     private SeekBar seekBar;
     private  int threshold; //Point at which we want to trigger a 'step'
@@ -56,34 +53,26 @@ public class MainFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_main, container, false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         user.load(getActivity());
 
         SharedPreferences prefs = this.getActivity().getSharedPreferences("PREFS", 0);
 
         name = (TextView) view.findViewById(R.id.name_text);
-        name.setText(prefs.getString("name", user.getName()));
-
-//        age = (TextView) view.findViewById(R.id.age_text);
-//        age.setText(prefs.getString("age", user.getAge()));
-//
-//        weight = (TextView) view.findViewById(R.id.weight_text);
-//        weight.setText(prefs.getString("weight", user.getWeight()));
-//
-//        height = (TextView) view.findViewById(R.id.height_text);
-//        height.setText(prefs.getString("height", user.getHeight()));
-//
-//        gender = (TextView) view.findViewById(R.id.gender_text);
-//        gender.setText(prefs.getString("gender", user.getGender()));
+        name.setText(prefs.getString("name", user.getName())); // ("name", "Hi,\n" + user.getName())
 
 //        textViewX = (TextView) view.findViewById(R.id.textViewX);
 //        textViewY = (TextView) view.findViewById(R.id.textViewY);
 //        textViewZ = (TextView) view.findViewById(R.id.textViewZ);
 
         textViewSteps = (TextView) view.findViewById(R.id.textSteps);
+        textViewSteps.setText(String.valueOf(numSteps));
+
         textViewCalories = (TextView) view.findViewById(R.id.textCalories);
-        //textSensetive = (TextView) view.findViewById(R.id.textSensetive);
+        textViewCalories.setText(String.valueOf(numCal));
+
+        //textSensitive = (TextView) view.findViewById(R.id.textSensitive);
 
         buttonResetS = (Button) view.findViewById(R.id.buttonRessetS);
         buttonResetC = (Button) view.findViewById(R.id.buttonRessetC);
@@ -93,16 +82,19 @@ public class MainFragment extends Fragment {
 
         //seekBar.setProgress(7);
         //seekBar.setOnSeekBarChangeListener(seekBarListener);
-        threshold = 7;
-        //textSensetive.setText(String.valueOf(threshold));
+        //textSensitive.setText(String.valueOf(threshold));
+
+        threshold = 7; //Sensitivity of the pedometer
 
         //Initialize Values
         previousY = 0;
         currentY = 0;
-        numSteps = 0;
-        numCal = 0;
+        numSteps = getNumSteps();
+        numCal = getNumCal();
 
-        //Enable the listener
+        Log.d("Steps", "" + getNumSteps());
+
+        //Enable the button
         enableAccelerometerListening();
 
         buttonResetS.setOnClickListener(new View.OnClickListener(){
@@ -114,6 +106,7 @@ public class MainFragment extends Fragment {
             }
         });
 
+        //Enable the button
         buttonResetC.setOnClickListener(new View.OnClickListener(){
 
             @Override
@@ -122,7 +115,6 @@ public class MainFragment extends Fragment {
                 textViewCalories.setText(String.valueOf(numCal));
             }
         });
-
 
         return view;
     }
@@ -143,17 +135,17 @@ public class MainFragment extends Fragment {
 
             currentY = y;
 
-            //if step is taken
+            //If step is taken
             if(Math.abs(currentY-previousY)>threshold) {
                 numSteps++;
                 countCalories();
                 textViewSteps.setText(String.valueOf(numSteps));
             }
 
-            //Display the values
-//            textViewX.setText(String.valueOf(x));
-//            textViewY.setText(String.valueOf(y));
-//            textViewZ.setText(String.valueOf(z));
+          //Display the values
+          /*textViewX.setText(String.valueOf(x));
+            textViewY.setText(String.valueOf(y));
+            textViewZ.setText(String.valueOf(z)); */
 
             //Store the previous Y
             previousY = y;
@@ -165,37 +157,48 @@ public class MainFragment extends Fragment {
         }
     };
 
-//    public SeekBar.OnSeekBarChangeListener seekBarListener = new SeekBar.OnSeekBarChangeListener() {
-//        @Override
-//        public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-//            //Change the treshold
-//            threshold = seekBar.getProgress();
-//            //Write to the TextView
-//            textSensetive.setText(String.valueOf(threshold));
-//        }
-//
-//        @Override
-//        public void onStartTrackingTouch(SeekBar seekBar) {
-//
-//        }
-//
-//        @Override
-//        public void onStopTrackingTouch(SeekBar seekBar) {
-//
-//        }
-//    };
+    /*public SeekBar.OnSeekBarChangeListener seekBarListener = new SeekBar.OnSeekBarChangeListener() {
+        @Override
+        public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+            //Change the treshold
+            threshold = seekBar.getProgress();
+            //Write to the TextView
+            textSensetive.setText(String.valueOf(threshold));
+        }
+
+        @Override
+        public void onStartTrackingTouch(SeekBar seekBar) {
+
+        }
+
+        @Override
+        public void onStopTrackingTouch(SeekBar seekBar) {
+
+        }
+    }; */
 
     public void countCalories() {
         int  weightC = Integer.valueOf(user.getWeight());
-        double calpm = weightC/0.5;
-        calpm = calpm * 0.5;
-        double calp = calpm / 1400;
 
-        numCal = (int) (numSteps * calp);
+        double calpm = weightC/0.5;         //Getting calories per mile
+        calpm = calpm * 0.5;                //1 mile ~ 1400 steps
+        double calp = calpm / 1400;         //Getting calories per step
+
+        numCal = (int) (numSteps * calp);   //Counting calories
+
         Log.d("Calories", "in:" + numCal);
         Log.d("Calories", "in:" + calpm);
 
-        textViewCalories.setText(String.valueOf(numCal));
+        textViewCalories.setText(String.valueOf(numCal)); //Printing calories
+
+    }
+
+    public static int getNumSteps() {
+        return numSteps;
+    }
+
+    public static int getNumCal() {
+        return numCal;
     }
 
 }

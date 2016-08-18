@@ -15,14 +15,8 @@
             android:icon="@drawable/ic_exercises"
             android:title="Exercises" />
     </group>
+
     <group android:id="@+id/nav_menu_3_group"
-        android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_workout"
-            android:icon="@drawable/ic_workout"
-            android:title="Workout" />
-    </group>
-    <group android:id="@+id/nav_menu_4_group"
         android:checkableBehavior="single">
         <item
             android:id="@+id/nav_history"
@@ -34,7 +28,7 @@
         <menu>
             <item
             android:id="@+id/nav_profile"
-            android:icon="@drawable/ic_edit"
+            android:icon="@drawable/ic_edit_profile"
             android:title="Profile" />
             <item
                 android:id="@+id/nav_logout"

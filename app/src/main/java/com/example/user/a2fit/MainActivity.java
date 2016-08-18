@@ -1,5 +1,6 @@
 package com.example.user.a2fit;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -17,6 +18,7 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 
@@ -25,6 +27,8 @@ public class MainActivity extends AppCompatActivity
 
     NavigationView navigationView = null;
     Toolbar toolbar = null;
+    User user = new User();
+    TextView text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +50,6 @@ public class MainActivity extends AppCompatActivity
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        User user = new User();
         boolean userExists = user.load(this);
         Log.d("Profile", "in");
         Log.d("Profile", "" + user.toString());
@@ -57,7 +60,7 @@ public class MainActivity extends AppCompatActivity
             finish();
         } else {
             // redirect to Home
-            Fragment fragment = new MainFragment();
+            Fragment fragment = new HomeFragment();
             FragmentManager fragmentManager = this.getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, fragment);
@@ -66,9 +69,11 @@ public class MainActivity extends AppCompatActivity
         }
         SharedPreferences prefs = this.getSharedPreferences("PREFS", 0);
 
+        user.load(this);
+
         View header = LayoutInflater.from(this).inflate(R.layout.nav_header_main, null);
         navigationView.addHeaderView(header);
-        TextView text = (TextView) header.findViewById(R.id.nav_header);
+        text = (TextView) header.findViewById(R.id.nav_header);
         text.setText(prefs.getString("name", user.getName()));
     }
 
@@ -114,26 +119,25 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_home) {
             Log.d("Profile", "in");
-            MainFragment fragment = new MainFragment();
+
+            LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            View view = inflater.inflate(R.layout.fragment_history, null);
+            view.setVisibility(LinearLayout.INVISIBLE);
+
+            HomeFragment fragment = new HomeFragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction =
                     getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container,fragment);
             fragmentTransaction.commit();
         } else if (id == R.id.nav_exercises) {
             Log.d("Exercise", "in");
-            SecondFragment fragment = new SecondFragment();
-            android.support.v4.app.FragmentTransaction fragmentTransaction =
-                    getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment_container,fragment);
-            fragmentTransaction.commit();
-        } else if (id == R.id.nav_workout) {
-            ThirdFragment fragment = new ThirdFragment();
+            ExercisesFragment fragment = new ExercisesFragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction =
                     getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container,fragment);
             fragmentTransaction.commit();
         } else if (id == R.id.nav_history) {
-            FourthFragment fragment = new FourthFragment();
+            HistoryFragment fragment = new HistoryFragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction =
                     getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container,fragment);

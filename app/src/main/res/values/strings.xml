@@ -8,7 +8,9 @@
     <string name="about_text">\t2fit is fitness app which allows you to achieve great results, within a short period of time. In addition, 2fit is an extensive database of exercises for every muscle, with a detailed description and video for each exercise. \n\n-Exercises with video support for every workout;
 \n\n-A list of the most effective workouts for every muscle group;
 \n\n-Text instruction with pictures for each exercise;
-\n\n-Exercise database with new exercises added after each update;</string>
+\n\n-Exercise database with new exercises added after each update;
+\n\n-Pedometer to count steps while walking;
+\n\n-Calories counter to see how calories you have burnt;</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

@@ -15,13 +15,13 @@ public class WebActivity extends Activity {
         setContentView(R.layout.activity_webview);
 
         web = (WebView) findViewById(R.id.webView1);
-        web.setWebViewClient(new myWebClient());
+        web.setWebViewClient(new CustomClient(findViewById(R.id.progressBar)));
         web.getSettings().setJavaScriptEnabled(true);
 
         int pos = getIntent().getIntExtra("key",0);
         if(pos==0)
         {
-            web.loadUrl("http://greatist.com/move/best-bodyweight-exercises-abs");
+            web.loadUrl("http://www.bodybuilding.com/exercises/finder/lookup/filter/muscle/id/13/muscle/abdominals");
         }
         else if(pos==1)
         {

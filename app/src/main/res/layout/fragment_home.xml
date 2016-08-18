@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.user.a2fit.MainFragment">
+    tools:context=".HomeFragment">
 
     <!--<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
         <!--xmlns:tools="http://schemas.android.com/tools"-->
@@ -11,7 +11,7 @@
         <!--android:layout_marginTop="56dp"-->
         <!--android:padding="5dp"-->
         <!--android:stretchColumns="1,2,3"-->
-        <!--tools:context=".MainFragment">-->
+        <!--tools:context=".HomeFragment">-->
 
     <!--<TableRow-->
         <!--android:id="@+id/tableRow1"-->
@@ -65,7 +65,7 @@
             <!--android:layout_height="wrap_content">-->
 
             <!--<TextView-->
-                <!--android:id="@+id/textSensetive"-->
+                <!--android:id="@+id/textSensitive"-->
                 <!--android:layout_width="wrap_content"-->
                 <!--android:layout_height="wrap_content"-->
                 <!--android:layout_span="4"-->
@@ -95,7 +95,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-light"
         android:layout_marginTop="78dp"
-        android:text="Hi: "
+        android:text="Hi,"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:textSize="22dp"/>
 
@@ -109,53 +109,13 @@
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:textSize="30dp"/>
 
-    <!--<TextView-->
-        <!--android:id="@+id/age_text"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:fontFamily="sans-serif-light"-->
-        <!--android:layout_marginTop="108dp"-->
-        <!--android:text="Age"-->
-        <!--android:layout_marginLeft="@dimen/activity_horizontal_margin"-->
-        <!--android:textSize="18dp"/>-->
-
-    <!--<TextView-->
-        <!--android:id="@+id/weight_text"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:fontFamily="sans-serif-light"-->
-        <!--android:layout_marginTop="138dp"-->
-        <!--android:text="Weight"-->
-        <!--android:layout_marginLeft="@dimen/activity_horizontal_margin"-->
-        <!--android:textSize="18dp"/>-->
-
-    <!--<TextView-->
-        <!--android:id="@+id/height_text"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:fontFamily="sans-serif-light"-->
-        <!--android:layout_marginTop="168dp"-->
-        <!--android:text="Height"-->
-        <!--android:layout_marginLeft="@dimen/activity_horizontal_margin"-->
-        <!--android:textSize="18dp"/>-->
-
-    <!--<TextView-->
-        <!--android:id="@+id/gender_text"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:fontFamily="sans-serif-light"-->
-        <!--android:layout_marginTop="198dp"-->
-        <!--android:text="Gender"-->
-        <!--android:layout_marginLeft="@dimen/activity_horizontal_margin"-->
-        <!--android:textSize="18dp"/>-->
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Calories:"
         android:textSize="34dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginLeft="220dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginLeft="210dp"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:fontFamily="sans-serif-light"/>
 
@@ -163,7 +123,6 @@
         android:id="@+id/textCalories"
         android:textSize="46dp"
         android:layout_marginLeft="265dp"
-        android:text="---"
         android:layout_span="4"
         android:layout_marginTop="248dp"
         android:textColor="@color/colorPrimary"
@@ -194,7 +153,6 @@
             android:id="@+id/textSteps"
             android:textSize="46dp"
             android:layout_marginLeft="90dp"
-            android:text="---"
             android:layout_span="4"
             android:layout_marginTop="348dp"
             android:textColor="@color/colorAccent"

@@ -31,7 +31,7 @@ public class CustomClient extends WebViewClient {
 
         super.onPageFinished(mWebView, url);
 
-        Log.d("client", "pagefinished");
+        Log.d("Client", "pagefinished");
 
         String removeFooterJS = "(function() { " + "var foot = document.getElementsByTagName('footer')[0];" +
                 "foot.parentNode.removeChild(foot);})()";
@@ -49,6 +49,8 @@ public class CustomClient extends WebViewClient {
         String removePostBox = "(function(){var classname=\"disqus_thread\"; var cells = document.getElementById(classname); cells.parentNode.removeChild(cells);})()";
         //remove the box from which you can go to the shop
         String removeNau4iPowe4e = "(function(){var classname=\"hp-intro\"; var cells = document.getElementsByClassName(classname); while(cells[0]){cells[0].parentNode.removeChild(cells[0]);}})()";
+        //remove filter
+        String removeFilter = "(function(){var classname=\"finderLeft\"; var cells = document.getElementsByClassName(classname); while(cells[0]){cells[0].parentNode.removeChild(cells[0]);}})()";
         //remove an ad
         String removeSomeAd = "(function(){var classname=\"textwidget\"; var cells = document.getElementsByClassName(classname); while(cells[0]){cells[0].parentNode.removeChild(cells[0]);}})()";
         //I forgot what I'm removing here
@@ -72,6 +74,7 @@ public class CustomClient extends WebViewClient {
         mWebView.loadUrl("javascript:" + js4);
         mWebView.loadUrl("javascript:" + removePostBox);
         mWebView.loadUrl("javascript:" + removeNau4iPowe4e);
+        mWebView.loadUrl("javascript:" + removeFilter);
         mWebView.loadUrl("javascript:" + removeSomeAd);
         mWebView.loadUrl("javascript:" + removeToggles);
         mWebView.loadUrl("javascript:" + removeSpodeli);
@@ -90,7 +93,7 @@ public class CustomClient extends WebViewClient {
     public void onPageStarted(WebView mWebView, String url, Bitmap favicon) {
         super .onPageStarted(mWebView, url, favicon);
 
-        Log.d("client", "pagestarted");
+        Log.d("Client", "pagestarted");
 
         mWebView.setVisibility(View.INVISIBLE);
     }

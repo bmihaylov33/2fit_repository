@@ -19,14 +19,14 @@ import android.widget.Toast;
 import java.util.Iterator;
 import java.util.List;
 
-public class FifthFragment extends Fragment {
+public class EditFragment extends Fragment {
 
     User user = new User();
     private EditText name;
     private EditText age;
     private EditText weight;
     private EditText height;
-    private String gender = null;
+    private String gender;
     private Button bt_cancel;
     private Button bt_ok;
 
@@ -78,6 +78,7 @@ public class FifthFragment extends Fragment {
                 // checkedId is the RadioButton selected
                 switch(checkedId) {
                     case R.id.radio_1:
+                        Log.d("RadioButton", "clicked");
                             gender=("Male");
                         Toast.makeText(getActivity(),
                                 gender, Toast.LENGTH_SHORT).show();

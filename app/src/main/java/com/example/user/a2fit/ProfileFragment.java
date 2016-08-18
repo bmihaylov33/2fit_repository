@@ -4,8 +4,6 @@ package com.example.user.a2fit;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -55,7 +53,7 @@ public class ProfileFragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-                FifthFragment fragment = new FifthFragment();
+                EditFragment fragment = new EditFragment();
                 android.support.v4.app.FragmentTransaction fragmentTransaction =
                         getActivity().getSupportFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.fragment_container,fragment);
