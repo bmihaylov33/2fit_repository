@@ -96,7 +96,7 @@ public class HistoryFragment extends Fragment implements OnChartGestureListener,
             ArrayList<String> xVals = new ArrayList<String>();
 
             int numSteps = HomeFragment.getNumSteps();
-            int numLabels = 10;
+            int numLabels = 5;
             int step = numSteps/numLabels;
 
             for(int i = 0; i<=numLabels ;i++) {
@@ -109,7 +109,7 @@ public class HistoryFragment extends Fragment implements OnChartGestureListener,
             ArrayList<Entry> yVals = new ArrayList<Entry>();
 
             int numCal = HomeFragment.getNumCal();
-            int numLabels = 10;
+            int numLabels = 5;
             int j = 0;
             //int step = numCal/numLabels;
 
